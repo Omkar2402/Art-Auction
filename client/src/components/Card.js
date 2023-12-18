@@ -12,6 +12,7 @@ import Typography from '@mui/material/Typography';
 // Files
 import imagePlaceholder from '../images/no-image-icon.png';
 import { secondsToHmsShort } from '../utils/secondsToHms';
+import { CardImg } from 'react-bootstrap';
 
 function MediaCard(props) {
   const navigate = useNavigate();
@@ -33,6 +34,8 @@ function MediaCard(props) {
     }
   };
 
+  console.log("Image: " + props.ad.image);
+
   return (
     <a
       onClick={(e) => {
@@ -40,9 +43,14 @@ function MediaCard(props) {
       }}
       style={{ textDecoration: 'none' }}
     >
+      
       <Card style={props.cardStyle}>
+        
         <CardActionArea>
           {!props.dashCard && (
+
+            
+            
             <CardMedia
               component='img'
               height='180'
@@ -51,6 +59,7 @@ function MediaCard(props) {
             />
           )}
           <CardContent>
+            
             <Typography gutterBottom variant='h6' component='div'>
               {props.ad.productName}
             </Typography>

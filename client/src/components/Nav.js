@@ -47,11 +47,13 @@ const Nav = (props) => {
               color="inherit"
               onClick={props.logout}
               sx={{ textDecoration: "none" }}
+              style={{ cursor: "pointer", color: "white", fontSize: "1.2rem", fontWeight: "bold", marginRight: "1rem", marginTop: "0.5rem", marginBottom: "0.5rem", padding: "0.5rem", borderRadius: "0.5rem", backgroundColor: "#ff0000" }}
             >
               Logout
             </Link>
           ) : (
-            <Link to="/login" sx={{ textDecoration: "none" }}>
+            <Link to="/login" sx={{ textDecoration: "none" }}
+            style={{cursor: "pointer", color: "white", fontSize: "1.2rem", fontWeight: "bold", marginRight: "1rem", marginTop: "0.5rem", marginBottom: "0.5rem", padding: "0.5rem", borderRadius: "0.5rem", backgroundColor: "#1976d2"}}>
               Login
             </Link>
           )}

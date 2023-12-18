@@ -217,12 +217,12 @@ const Ad = (props) => {
                     )}
                   </Box>
                   <Box sx={descriptionArea}>
-                    <Typography variant='h6'>Description</Typography>
-                    <Typography variant='body2'>{props.adDetails.description}</Typography>
+                    <Typography variant='h6' fontWeight={"bold"}>Description</Typography>
+                    <Typography variant='subtitle1'>{props.adDetails.description}</Typography>
                     <Divider variant='middle' sx={{ margin: '.5rem' }} />
 
-                    <Typography variant='h6'>Info</Typography>
-                    <Typography variant='body1'>
+                    <Typography variant='h6' fontWeight={"bold"}>Info</Typography>
+                    <Typography variant='subtitle1'>
                       Posted on: {getUTCDate(props.adDetails.createdAt)}
                     </Typography>
                     <Typography variant='body1'>
@@ -233,18 +233,18 @@ const Ad = (props) => {
                     </Typography>
                     <Divider variant='middle' sx={{ margin: '.5rem' }} />
 
-                    <Typography variant='h6'>Auction</Typography>
-                    <Typography variant='body1'>Status: {auctionStatus()}</Typography>
-                    <Typography variant='body1'>
+                    <Typography variant='h6' fontWeight={"bold"}>Auction</Typography>
+                    <Typography variant='subtitle1'>Status: {auctionStatus()}</Typography>
+                    <Typography variant='subtitle1'>
                       Bids: {props.adDetails.bids.length}
                     </Typography>
-                    <Typography variant='body1'>
+                    <Typography variant='subtitle1'>
                       Time remaining: {getTimeRemaining()}
                     </Typography>
-                    <Typography variant='body1'>
+                    <Typography variant='subtitle1'>
                       Current price: ${props.adDetails.currentPrice.$numberDecimal}
                     </Typography>
-                    <Typography variant='body1'>
+                    <Typography variant='subtitle1'>
                       Current bidder: {props.highestBid && props.highestBid.user.username}
                     </Typography>
                     <Divider variant='middle' sx={{ margin: '.5rem' }} />

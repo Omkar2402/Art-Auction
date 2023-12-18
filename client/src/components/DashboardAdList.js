@@ -6,6 +6,7 @@ import Card from './Card';
 import { Button, Box, ButtonGroup } from '@mui/material';
 // Styling
 import { boardStyle, adAreaStyle, paginationStyle, dashCardStyle } from './css/dashStyle';
+import { CardImg } from 'react-bootstrap';
 
 const DashboardAdList = () => {
   const [ads, setAds] = useState([]);
@@ -44,9 +45,17 @@ const DashboardAdList = () => {
       <Box sx={boardStyle}>
         <Box sx={adAreaStyle}>
           {ads.slice(firstAdIndex, lastAdIndex).map((ad) => {
+            console.log("Ad: " + ad._id + " " + ad.productName + " " + ad.currentPrice.$numberDecimal + " " + ad.image);
             return (
               <div className='ad__container' key={ad._id}>
-                <Card ad={ad} key={ad._id} dashCard={true} cardStyle={dashCardStyle} />
+                <Card 
+                
+                ad={ad} 
+                key={ad._id} 
+                dashCard={true} 
+                cardStyle={dashCardStyle}
+                />  
+                
               </div>
             );
           })}

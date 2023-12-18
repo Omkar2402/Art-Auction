@@ -118,7 +118,7 @@ const AdForm = (props) => {
       <Box sx={boxStyle}>
         <Paper sx={adFormArea}>
           {/* Page title */}
-          <Typography variant="h4">Post Ad</Typography>
+          <Typography variant="h4" fontWeight={"bold"} >Post Ad</Typography>
           <Alert />
 
           {/* Form */}
